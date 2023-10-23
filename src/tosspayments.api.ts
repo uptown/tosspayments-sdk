@@ -48,42 +48,42 @@ export class TossPaymentsApi {
   /**
    * 결제 API
    */
-  get paymentApi(): PaymentApi {
+  get payment(): PaymentApi {
     return this.paymentApiLoader.get();
   }
 
   /**
    * 가상계좌 API
    */
-  get virtualAccountApi(): VirtualAccountApi {
+  get virtualAccount(): VirtualAccountApi {
     return this.virtualAccountApiLoader.get();
   }
 
   /**
    * 정기결제 API
    */
-  get billingApi(): BillingApi {
+  get billing(): BillingApi {
     return this.billingApiLoader.get();
   }
 
   /**
    * 정산 API
    */
-  get settlementApi(): SettlementApi {
+  get settlement(): SettlementApi {
     return this.settlementApiLoader.get();
   }
 
   /**
    * 거래내역 API
    */
-  get transactionApi(): TransactionApi {
+  get transaction(): TransactionApi {
     return this.transactionApiLoader.get();
   }
 
   /**
    * 현금영수증 API
    */
-  get cashReceiptApi(): CashReceiptApi {
+  get cashReceipt(): CashReceiptApi {
     return this.cashReceiptApiLoader.get();
   }
 }

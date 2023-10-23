@@ -1,9 +1,9 @@
 {
   "name": "@yuju/tosspayments-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Toss Payments SDK for Node.js",
   "author": "Juyoung Lee (mark.juyoung.lee@gmail.com)",
-  "homepage": "https://github.com/uptown/tosspayments-sdk.js",
+  "homepage": "https://github.com/yujutown/tosspayments-sdk.js",
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
@@ -15,7 +15,7 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "got": "^12.6.1"
+    "got": "^12"
   },
   "scripts": {
     "test": "jest test/**/*.test.ts",

@@ -1,7 +1,14 @@
 # [TossPayments 결제 API SDK (비공식)](https://docs.tosspayments.com/reference)
 
+
+![npm](https://img.shields.io/npm/dt/%40yuju/tosspayments-sdk)
+[![Install size](https://packagephobia.com/badge?p=%40yuju/tosspayments-sdk)](https://packagephobia.com/result?p=%40yuju/tosspayments-sdk)
+
 ## 소개
 - [TossPayments 결제 API](https://docs.tosspayments.com/reference)를 사용하기 위한 SDK 입니다.
+
+## 데모
+- [데모프로젝트](https://github.com/yujutown/tosspayments-sdk.js-demo)를 참고해주세요.
 
 ## 지원
 - [x] [결제 API](https://docs.tosspayments.com/reference#%EA%B2%B0%EC%A0%9C)
@@ -18,14 +25,16 @@
 ```typescript
 import {TossPaymentsApi} from '@yuju/tosspayments-sdk';
 
-const tossPaymentsApi = new TossPaymentsApi("test_sk_zXLkKEypNArWmo50nX3lmeaxYG5R")
-const result = await tossPaymentsApi.paymentApi.confirm({
+const tossPaymentsApi = new TossPaymentsApi("secret_key")
+const result = await tossPaymentsApi.payment.confirm({
   paymentKey: "1234",
   amount: 1000,
   orderId: "1234",
 });
 if (result.success) {
   expect(result.data.balanceAmount).toBe(1000)
+} else {
+  throw new Error(result.error.message)
 }
 ```
 
